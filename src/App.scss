@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNSPY48uUFOTJTgTsxymxox8WOWrmHsk5y_A&s') no-repeat center center fixed;
+  background-size: cover;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: white;
+  text-align: center;
+}
+
+.top_section {
+  margin-bottom: 20px;
+}
+
+.location {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.temperature {
+  font-size: 3rem;
+  margin: 10px 0;
+}
+
+.description {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.bottom_section {
+  display: flex;
+  flex-direction: column;
+}
+
+.wind, .humidity {
+  font-size: 1.2rem;
+}

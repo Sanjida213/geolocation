@@ -101,6 +101,7 @@
 
 
 import './App.scss';
+import ToDoList from './components/Weather/ToDoList/ToDoList';
 import Weather
  from './components/Weather/Weather';
 const App = () => {
@@ -108,6 +109,7 @@ const App = () => {
   return (
     <div>
       <Weather/>
+      <ToDoList/>
     </div>
   )
 }  

@@ -1,0 +1,32 @@
+.ToDoList {
+  text-align: center;
+}
+
+input[type="text"] {
+  margin-right: 10px;
+}
+
+button {
+  margin-left: 5px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin: 5px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+li span {
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+li button {
+  margin-left: 10px;
+}

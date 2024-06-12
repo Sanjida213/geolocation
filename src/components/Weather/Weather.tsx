@@ -60,42 +60,40 @@ const Weather = () => {
   };
 
   return (
-    <div className="weather">
-      <section className="container">
-        <div className="weather__search">
-          <input
-            type="text"
-            value={searchLocation}
-            onChange={handleInputChange}
-            onKeyDown={handleKeyPress}
-            placeholder="Enter location"
-          />
-          <button onClick={handleSearch}>Search</button>
-        </div>
-        <div className="weather__top-section">
-          {weatherData && (
-            <>
-              <p className="weather__location">{weatherData.location.name}</p>
-              <p className="weather__temperature">{weatherData.current.temp_c}°C</p>
-              <p className="weather__description">{weatherData.current.condition.text.toLowerCase()}</p>
-              {weatherData.current.condition.icon && (
-                <img
-                  className="weather__icon"
-                  src={weatherData.current.condition.icon}
-                  alt={weatherData.current.condition.text}
-                />
-              )}
-            </>
-          )}
-        </div>
-        <div className="weather__bottom-section">
-          <p className="weather__wind">Wind: {weatherData?.current.wind_mph} mph</p>
-          <p className="weather__humidity">Humidity: {weatherData?.current.humidity}%</p>
-        </div>
-      </section>
+    <div className="weather__container">
+      <div className="weather__search">
+        <input
+          type="text"
+          value={searchLocation}
+          onChange={handleInputChange}
+          onKeyDown={handleKeyPress}
+          placeholder="Enter location"
+          className="weather__input"
+        />
+        <button onClick={handleSearch} className="weather__button">Search</button>
+      </div>
+      <div className="weather__top-section">
+        {weatherData && (
+          <>
+            <p className="weather__location">{weatherData.location.name}</p>
+            <p className="weather__temperature">{weatherData.current.temp_c}°C</p>
+            <p className="weather__description">{weatherData.current.condition.text.toLowerCase()}</p>
+            {weatherData.current.condition.icon && (
+              <img
+                className="weather__icon"
+                src={weatherData.current.condition.icon}
+                alt={weatherData.current.condition.text}
+              />
+            )}
+          </>
+        )}
+      </div>
+      <div className="weather__bottom-section">
+        <p className="weather__wind">Wind: {weatherData?.current.wind_mph} mph</p>
+        <p className="weather__humidity">Humidity: {weatherData?.current.humidity}%</p>
+      </div>
     </div>
   );
 };
 
 export default Weather;
-

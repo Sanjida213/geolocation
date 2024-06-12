@@ -2,6 +2,15 @@
   margin: 0;
   box-sizing: border-box;
   font-family: Arial, sans-serif;
+}
+
+body {
   background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNSPY48uUFOTJTgTsxymxox8WOWrmHsk5y_A&s') no-repeat center center fixed;
   background-size: cover;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }

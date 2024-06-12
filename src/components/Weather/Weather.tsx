@@ -3,12 +3,12 @@ import { WeatherData } from '../../types/WeatherData';
 import './Weather.scss';
 
 const Weather = () => {
-  const [searchLocation, setSearchLocation] = useState('');
-  const [location, setLocation] = useState('');
+  const [searchLocation, setSearchLocation] = useState<string>('');
+  const [location, setLocation] = useState<string>('');
   const [weatherData, setWeatherData] = useState<WeatherData | null>(null);
 
   const API_KEY = import.meta.env.VITE_API_KEY;
-
+ 
   const getWeather = async (location: string) => {
     try {
       const url = `http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${location}`;
@@ -98,3 +98,4 @@ const Weather = () => {
 };
 
 export default Weather;
+

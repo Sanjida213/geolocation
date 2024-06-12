@@ -1,7 +1,6 @@
-import "./ToDoList.scss"
-import { ToDoListData} from "../../../types/ToDoListData"
 import { useState } from "react";
-
+import "./ToDoList.scss";
+import { ToDoListData } from "../../../types/ToDoListData";
 
 const ToDoList = () => {
   const [todos, setTodos] = useState<ToDoListData[]>([]);
@@ -28,37 +27,35 @@ const ToDoList = () => {
     setTodos(todos.filter(todo => todo.id !== id));
   };
 
-
   return (
-    <div className="ToDoList">
+    <div className="to-do-list">
       <h1>ToDo List</h1>
-      <div>
+      <div className="to-do-list__input-container">
         <input
           type="text"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
+          className="to-do-list__input"
         />
-        <button onClick={handleAddTodo}>Add Todo</button>
+        <button onClick={handleAddTodo} className="to-do-list__button">Add Todo</button>
       </div>
-      <ul>
+      <ul className="to-do-list__list">
         {todos.map(todo => (
-          <li key={todo.id}>
+          <li key={todo.id} className="to-do-list__item">
             <input
               type="checkbox"
               checked={todo.completed}
               onChange={() => handleToggleTodo(todo.id)}
             />
-            <span style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}>
+            <span className="to-do-list__text" style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}>
               {todo.text}
             </span>
-            <button onClick={() => handleDeleteTodo(todo.id)}>Delete</button>
+            <button onClick={() => handleDeleteTodo(todo.id)} className="to-do-list__delete-button">Delete</button>
           </li>
         ))}
       </ul>
     </div>
   );
-}
+};
 
 export default ToDoList;
-
-

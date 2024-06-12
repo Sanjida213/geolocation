@@ -4,13 +4,30 @@
   font-family: Arial, sans-serif;
 }
 
+
 body {
   background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNSPY48uUFOTJTgTsxymxox8WOWrmHsk5y_A&s') no-repeat center center fixed;
   background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;
+  margin-top: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+    gap: 10px;
+  }
 }

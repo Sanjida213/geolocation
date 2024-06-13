@@ -7,7 +7,6 @@ const News = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
-  const NEWS_API_KEY = import.meta.env.VITE_NEWS_API_KEY;
 
   const getNews = async () => {
     setLoading(true);
@@ -40,7 +39,7 @@ const News = () => {
       {error && <p className="error">{error}</p>}
       <div className="news__articles">
         {newsData && (
-          newsData.slice(0,3).map((article, index) => (
+          newsData.slice(0,4).map((article, index) => (
             <div key={index} className="news__article">
               <h2 className="news__article-title">{article.title}</h2>
               <p className="news__article-description">{article.description}</p>

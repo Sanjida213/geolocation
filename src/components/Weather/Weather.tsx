@@ -77,7 +77,7 @@ const Weather = () => {
           <>
             <p className="weather__location">{weatherData.location.name}</p>
             <p className="weather__temperature">{weatherData.current.temp_c}°C</p>
-            <p className="weather__description">{weatherData.current.condition.text.toLowerCase()}</p>
+            <p className="weather__description">{weatherData.current.condition.text}</p>
             {weatherData.current.condition.icon && (
               <img
                 className="weather__icon"

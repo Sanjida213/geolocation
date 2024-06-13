@@ -15,11 +15,11 @@ Follow these steps to set up the project on your local machine:
 8. Open the browser and visit http://localhost:5173 to see the app
 
 ## **Features**
-Current Weather: Displays the current temperature, weather condition, wind speed, humidity, etc.
-City Search: Ability to search for weather in any city globally.
-Geolocation: Automatically fetches and displays weather for the user's current location.
-Top BBC News: Ability to read the top BBC news.
-Todo List: Allows users to create and delete personal tasks.
+- Current Weather: Displays the current temperature, weather condition, wind speed, humidity, etc.
+- City Search: Ability to search for weather in any city globally.
+- Geolocation: Automatically fetches and displays weather for the user's current location.
+- Top BBC News: Ability to see top BBC news headlines.
+- Todo List: Allows users to create and delete personal tasks.
 
 
 ## **Technologies Used**

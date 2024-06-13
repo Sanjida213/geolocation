@@ -23,9 +23,9 @@ Todo List: Allows users to create and delete personal tasks.
 
 
 ## **Technologies Used**
-React
-TypeScript
-SCSS
-Weather API: For fetching weather data.
-https://www.weatherapi.com/docs/
-https://newsapi.org/docs
+- React
+- TypeScript
+- SCSS
+- Weather API: For fetching weather data.
+- https://www.weatherapi.com/docs/
+- https://newsapi.org/docs
